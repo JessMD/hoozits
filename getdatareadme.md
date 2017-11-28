@@ -1,8 +1,12 @@
-##Project G : Building a Remote Sensing System
-##Jessica Davis and Kathryn Murie 
-##09/11/17
 
-##import `
+
+
+## Project G : Building a Remote Sensing System
+## Jessica Davis and Kathryn Murie 
+## 09/11/17
+
+## Import packages
+`
 import urllib.request
 import time
 import pylab
@@ -10,7 +14,7 @@ import matplotlib.animation as animation
 import datetime
 `
 
-##Create files 
+## Create files 
 `
 Temp = open('Temperature_data', 'w') 
 Hum = open('humidity_data' , 'w')
