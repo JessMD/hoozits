@@ -6,7 +6,8 @@
 ## 09/11/17
 
 ## Import packages
-`import urllib.request
+``
+import urllib.request
 
 import time
 
@@ -14,7 +15,8 @@ import pylab
 
 import matplotlib.animation as animation
 
-import datetime`
+import datetime
+``
 
 ## Create files 
 `
