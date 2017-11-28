@@ -15,9 +15,12 @@ import datetime
  `
 
 ## Create files 
-`Temp = open('Temperature_data', 'w') 
+` 
+Temp = open('Temperature_data', 'w') 
 Hum = open('humidity_data' , 'w')
-
+ `
+## Define classes to obtain temperature and humidity readings
+`
 def getTemp():
 	with urllib.request.urlopen('http://192.168.1.2/temp') as response:
 		Temperature = str(response.read())
@@ -26,7 +29,7 @@ def getTemp():
 def getHum():
 	with urllib.request.urlopen('http://192.168.1.2/humidity') as response:
 		Humidity = str(response.read())
-	return Humidity`
+	return Humidity `
 	
 ## Empty arrays of time and measurement values to plot
 `
