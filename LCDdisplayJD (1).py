@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 13 12:37:52 2017
 
-@author: kathryn
-"""
 #import
 import time
 import Adafruit_CharLCD as LCD
