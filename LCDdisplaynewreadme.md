@@ -5,15 +5,17 @@
 ## Interactive Weather Sensor code: Contains two sensors one inside with IP address http://192.168.1.2
 ## and one outside with IP address http://192.168.1.3.
 ## import packages 
-`import time
+`
+import time
 import Adafruit_CharLCD as LCD
 import urllib.request
 import pylab
 import matplotlib.animation as animation
 import datetime
 import math
-import numpy as np
+import numpy as np`
 ## Initialize the LCD using the pins 
+`
 lcd = LCD.Adafruit_CharLCDPlate()
 t = 1 #define sleeptime for all messages`
 
