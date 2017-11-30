@@ -72,16 +72,14 @@ if time_of_day > 1700000000 :
         display(0.0, 1.0, 0.0 , 'Good evening',t)
 else :
         display(0.0, 1.0, 0.0 , 'Good afternoon',t)
-
 display(0.0, 1.0, 0.0 , 'Welcome to work!',t)
 display(0.0, 1.0, 0.0 , 'The date is...',t)
 display(0.0, 1.0, 0.0 , time.strftime("%d/%m/%Y"),t)
 display(0.0, 1.0, 0.0 , 'The time is...',t)
 display(0.0, 1.0, 0.0 , time.strftime("%H:%M"),t)
+display(0.0, 1.0, 0.0 , 'Please refer to the console',t)`
 
-display(0.0, 1.0, 0.0 , 'Please refer to the console',t)
-`
-## user can input time interval they would like between checking the humidity and temperature
+## User can input time interval they would like between checking the humidity and temperature
 `
 ctime = input('How often would you like to check the conditions today? Please enter your answer in minutes: ')
 checktime = (float(ctime)*60) 
