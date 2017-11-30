@@ -1,11 +1,10 @@
-##Project G : Building a Remote Sensing System
-##Jessica Davis and Kathryn Murie 
-##last edited 29/11/17
-##import
+## Project G : Building a Remote Sensing System
+## Jessica Davis and Kathryn Murie 
+## last edited 29/11/17
 
-##Interactive Weather Sensor code: Contains two sensors one inside with IP address http://192.168.1.2
-##and one outside with IP address http://192.168.1.3.
- 
+## Interactive Weather Sensor code: Contains two sensors one inside with IP address http://192.168.1.2
+## and one outside with IP address http://192.168.1.3.
+## import packages 
 `import time
 import Adafruit_CharLCD as LCD
 import urllib.request
@@ -18,7 +17,7 @@ import numpy as np
 lcd = LCD.Adafruit_CharLCDPlate()
 t = 1 #define sleeptime for all messages`
 
-##define function to program the LCD display when given 5 arguments; the colour (c1,c2,c3), the text to be displayed (message) and the sleeptime
+## Define function to program the LCD display when given 5 arguments; the colour (c1,c2,c3), the text to be displayed (message) and the sleeptime
 `
 def display(c1,c2,c3, message, sleeptime):
         lcd.set_color(c1,c2,c3)
@@ -31,30 +30,30 @@ def displaydata(c1,c2,c3, message, sleeptime):
         lcd.clear()
         lcd.message(message)
         time.sleep(sleeptime)`
-##INSIDE SENSOR
-##defining function that returns the temperature in degrees celsius
+## INSIDE SENSOR
+## Defining function that returns the temperature in degrees celsius
 `
 def getT():
 	with urllib.request.urlopen('http://192.168.1.2/temp') as response:
 		Temperature = str(response.read())
 		T = (int(Temperature.split()[1]) - 32 )*(5/9)
 	return T`
-##defining function that returns the humidity
+## Defining function that returns the humidity
 `
 def getH():
 	with urllib.request.urlopen('http://192.168.1.2/humidity') as response:
 		Humidity = str(response.read())
 		H = (int(Humidity.split()[1][:-2]))
 	return H`
-##OUTSIDE SENSOR
-##defining function that returns the outside temperature in degrees celsius
+## OUTSIDE SENSOR
+## Defining function that returns the outside temperature in degrees celsius
 `
 def getoutT():
 	with urllib.request.urlopen('http://192.168.1.3/temp') as response:
 		Temperature = str(response.read())
 		outT = (int(Temperature.split()[1]) - 32 )*(5/9)
 	return outT`
-##defining function that returns the outside humidity
+## Defining function that returns the outside humidity
 `
 def getoutH():
 	with urllib.request.urlopen('http://192.168.1.3/humidity') as response:
@@ -62,8 +61,8 @@ def getoutH():
 		outH = Humidity.split()[1][:-2]
 	return outH 
       `
-##welcome start up
-##initial message changes relative to the time of day
+## Welcome start up
+## Initial message changes relative to the time of day
 `
 time_of_day = time.time() 
 if time_of_day < 1200000000 :
@@ -87,7 +86,7 @@ ctime = input('How often would you like to check the conditions today? Please en
 checktime = (float(ctime)*60) 
 print('t interval', checktime)
 `
-##user has the option to input their own temperature and humidity or go with our recommendation
+## User has the option to input their own temperature and humidity or go with our recommendation
 `
 temp_ans = input('We recommend 22 degrees as the ideal temperature, would you like to change this? (yes/no)') 
 if temp_ans == 'yes':
@@ -100,7 +99,7 @@ if hum_ans == 'yes':
 else:
         ideal_hum = 50 #(%)`
 
-##compare data inside to ideal variables set.
+## Compare data inside to ideal variables set.
 `
 timetemp = []
 timeHum = []
@@ -179,8 +178,9 @@ while i<50 :
         print(i)
         i+=1
         time.sleep(float(checktime))`
-##calculating average time to retrieve temperature data from the internet,
-##and the uncertainty on this value 
+	
+## Calculating average time to retrieve temperature data from the internet,
+## and the uncertainty on this value 
 `
 print(timetemp)
 avg_timetemp = sum(timetemp)/len(timetemp)    
