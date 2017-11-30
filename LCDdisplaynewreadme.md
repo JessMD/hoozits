@@ -38,14 +38,16 @@ def getT():
 	with urllib.request.urlopen('http://192.168.1.2/temp') as response:
 		Temperature = str(response.read())
 		T = (int(Temperature.split()[1]) - 32 )*(5/9)
-	return T`
+	return T
+	`
 ## Defining function that returns the humidity
 `
 def getH():
 	with urllib.request.urlopen('http://192.168.1.2/humidity') as response:
 		Humidity = str(response.read())
 		H = (int(Humidity.split()[1][:-2]))
-	return H`
+	return H
+	`
 ## OUTSIDE SENSOR
 ## Defining function that returns the outside temperature in degrees celsius
 `
@@ -53,7 +55,8 @@ def getoutT():
 	with urllib.request.urlopen('http://192.168.1.3/temp') as response:
 		Temperature = str(response.read())
 		outT = (int(Temperature.split()[1]) - 32 )*(5/9)
-	return outT`
+	return outT
+	`
 ## Defining function that returns the outside humidity
 `
 def getoutH():
@@ -72,12 +75,13 @@ if time_of_day > 1700000000 :
         display(0.0, 1.0, 0.0 , 'Good evening',t)
 else :
         display(0.0, 1.0, 0.0 , 'Good afternoon',t)
-display(0.0, 1.0, 0.0 , 'Welcome to work!',t)
+	display(0.0, 1.0, 0.0 , 'Welcome to work!',t)
 display(0.0, 1.0, 0.0 , 'The date is...',t)
 display(0.0, 1.0, 0.0 , time.strftime("%d/%m/%Y"),t)
 display(0.0, 1.0, 0.0 , 'The time is...',t)
 display(0.0, 1.0, 0.0 , time.strftime("%H:%M"),t)
-display(0.0, 1.0, 0.0 , 'Please refer to the console',t)`
+display(0.0, 1.0, 0.0 , 'Please refer to the console',t)
+`
 
 ## User can input time interval they would like between checking the humidity and temperature
 `
@@ -178,11 +182,12 @@ while i<50 :
         time.sleep(float(checktime))
 	`
 ## Calculating average time to retrieve temperature data from the internet,
-## and the uncertainty on this value `
+## and the uncertainty on this value 
+`
 print(timetemp)
 avg_timetemp = sum(timetemp)/len(timetemp)    
 SEtimetemp = numpy.std(timetemp)/(len(timetemp))**0.5
-
-print('average time taken to recieve temperature=' ,avg_timetemp, 'with uncertainty=',SEtimetemp)`
+print('average time taken to recieve temperature=' ,avg_timetemp, 'with uncertainty=',SEtimetemp)
+`
 
 
