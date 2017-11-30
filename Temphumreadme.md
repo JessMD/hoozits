@@ -42,7 +42,6 @@ plotFigure = pylab.figure()
 ## The function to call each time the plot is updated
 `
 def updatePlot( i ):
-    
     H.append( getHum() ) # Store the Humidity
     T.append( getTemp() )           # Store the Temperature
     plotFigure.clear()                       # Clear the old plot
@@ -51,9 +50,8 @@ def updatePlot( i ):
     pylab.ylabel('Temperature (degree celcius)')
     pylab.title('temperature measurements against Humidity ')
     `
-
-## Make the animated plot
-`
+## Make the animated plot `
 ani = animation.FuncAnimation( plotFigure, updatePlot, interval=500 )
 pylab.show()
 `
+
