@@ -1,3 +1,5 @@
+## Project G : Building a Remote Sensing System
+## Jessica Davis and Kathryn Murie 
 ## Dew point temperature calculation from humidity reading
 `
 import urllib.request
