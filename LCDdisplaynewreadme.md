@@ -1,10 +1,9 @@
 ## Project G : Building a Remote Sensing System
 ## Jessica Davis and Kathryn Murie 
-## last edited 29/11/17
 
 ## Interactive Weather Sensor code: Contains two sensors one inside with IP address http://192.168.1.2
 ## and one outside with IP address http://192.168.1.3.
-## import packages 
+## Import packages 
 `
 import time
 import Adafruit_CharLCD as LCD
@@ -82,7 +81,7 @@ display(0.0, 1.0, 0.0 , time.strftime("%H:%M"),t)
 
 display(0.0, 1.0, 0.0 , 'Please refer to the console',t)
 `
-##user can input time interval they would like between checking the humidity and temperature
+## user can input time interval they would like between checking the humidity and temperature
 `
 ctime = input('How often would you like to check the conditions today? Please enter your answer in minutes: ')
 checktime = (float(ctime)*60) 
