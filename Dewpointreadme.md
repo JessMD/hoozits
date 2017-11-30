@@ -33,8 +33,8 @@ plt.plot(T, Td, linewidth=0.7, c='red')`
 
 ## Split graph into four quadrants
 `
-plt.axhline(y=0, linewidth=0.7,color="black")`
-## Draw a default vline at x=1 that spans the yrange `
+plt.axhline(y=0, linewidth=0.7,color="black")
+
 plt.axvline(x=0,linewidth=0.7, color="black")`
 
 `
