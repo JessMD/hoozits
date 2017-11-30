@@ -43,7 +43,6 @@ plotFigure = pylab.figure() `
 ## The function to call each time the plot is updated
 `
 def updatePlot( i ):
-    
     t.append( datetime.datetime.now() ) # Store the current time
     T.append( getTemp() )           # Store the measurement
     plotFigure.clear()          # Clear the old plot
