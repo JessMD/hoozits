@@ -98,7 +98,7 @@ if hum_ans == 'yes':
 else:
         ideal_hum = 50 #(%)`
 
-## Compare data inside to ideal variables set.
+## Compare data inside to ideal variables set
 `
 timetemp = []
 timeHum = []
@@ -109,10 +109,8 @@ while i<50 :
         t1temp = time.time() #used for timing how long it takes to get data from IP address
         T = getT()
         t2temp = time.time()
-        timetemp.append(t2temp-t1temp)
-        
-        H = getH()
-        
+        timetemp.append(t2temp-t1temp
+	H = getH()
         dispTin = str(T)[0]+str(T)[1]+str(T)[2]+str(T)[3]
         outT = getoutT()
         outH = getoutH()
@@ -142,8 +140,10 @@ while i<50 :
                 displaydata(0.0, 0.0, 1.0 ,'{Humid} %'.format(Humid=str(H)),t)
                 display(0.0, 0.0, 1.0 ,'The humidity is too low',t)
         display(0.0, 1.0, 0.0 , 'Please refer to the console',t)
-        #User has the option of getting data from outside sensor
-        outside_ans = input('Would you like to know the conditions outside? (yes/no)')
+        
+	#User has the option of getting data from outside sensor
+        
+	outside_ans = input('Would you like to know the conditions outside? (yes/no)')
         time.sleep(3) #gives the user time to look over to LCD
         dispTout = str(outT)[0]+str(outT)[1]+str(outT)[2]+str(outT)[3]
         if outside_ans == 'yes':
@@ -180,6 +180,7 @@ while i<50 :
 	
 ## Calculating average time to retrieve temperature data from the internet,
 ## and the uncertainty on this value 
+
 `
 print(timetemp)
 avg_timetemp = sum(timetemp)/len(timetemp)    
