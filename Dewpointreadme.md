@@ -10,7 +10,8 @@ import numpy as np
 import time
 import pylab
 import datetime
-import matplotlib.pyplot as plt`
+import matplotlib.pyplot as plt
+`
 
 
 ## Defining function that returns the outside humidity
@@ -19,11 +20,11 @@ def getoutH():
 	with urllib.request.urlopen('http://192.168.1.3/humidity') as response:
 		Humidity = str(response.read())
 		outH = Humidity.split()[1][:-2]
-	return outH`
+	return outH
+	`
 ## Check temperature and humidity and then calculate Td for plotting a T-Td graph
 `
 H = getoutH()
-
 T = np.linspace(-30, 30, 20)
 A = float(17.625)
 B = float(243.04) #degrees celsius
@@ -38,10 +39,10 @@ plt.plot(T, Td, linewidth=0.7, c='red')
 ## Split graph into four quadrants
 `
 plt.axhline(y=0, linewidth=0.7,color="black")
-
-plt.axvline(x=0,linewidth=0.7, color="black")`
+plt.axvline(x=0,linewidth=0.7, color="black")
+`
 ## Plot Graph using matplotlib
-# mfc=markerfacecolor, mec=markeredgecolor, ms=markersize and mew=markeredgewidth.
+### mfc=markerfacecolor, mec=markeredgecolor, ms=markersize and mew=markeredgewidth.
 `
 plt.title('Dew Point Temperature for Measured Humidity')
 plt.axis([-30, 30, -30, 30])
