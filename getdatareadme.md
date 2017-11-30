@@ -3,6 +3,7 @@
 
 ## Project G : Building a Remote Sensing System
 ## Jessica Davis and Kathryn Murie 
+## Animated graph of temperature against time.
 ## 09/11/17
 
 ## Import packages
