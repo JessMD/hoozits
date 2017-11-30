@@ -125,8 +125,7 @@ while i<50 :
         else :
                 display(0.0, 0.0, 1.0 ,'The temperature is currently...',t)
                 displaydata(0.0, 0.0, 1.0 ,'{dispTin} degrees'.format(dispTin = dispTin),t)
-                display(0.0, 0.0, 1.0 ,'It is too cold',t)
-        
+                display(0.0, 0.0, 1.0 ,'It is too cold',t) 
         if H > ideal_hum:
                 display(1.0, 0.0, 0.0 , 'The humidity is currently...',t)
                 displaydata(1.0, 0.0, 0.0 , '{Humid} %'.format(Humid=str(H)),t)
@@ -140,9 +139,9 @@ while i<50 :
                 displaydata(0.0, 0.0, 1.0 ,'{Humid} %'.format(Humid=str(H)),t)
                 display(0.0, 0.0, 1.0 ,'The humidity is too low',t)
         display(0.0, 1.0, 0.0 , 'Please refer to the console',t)
-        
-	#User has the option of getting data from outside sensor
-        
+	`
+## User has the option of getting data from outside sensor
+	`
 	outside_ans = input('Would you like to know the conditions outside? (yes/no)')
         time.sleep(3) #gives the user time to look over to LCD
         dispTout = str(outT)[0]+str(outT)[1]+str(outT)[2]+str(outT)[3]
@@ -173,15 +172,13 @@ while i<50 :
                 display(0.0,0.1,0.0, 'check back in {ctime} minute(s)'.format(ctime=ctime),t)                  
         else:
                 display(0.0,1.0,0.0,'okay, check back in {ctime} minute(s)'.format(ctime=ctime),t)
-        
-        print(i)
+		
+      print(i)
         i+=1
-        time.sleep(float(checktime))`
-	
+        time.sleep(float(checktime))
+	`
 ## Calculating average time to retrieve temperature data from the internet,
-## and the uncertainty on this value 
-
-`
+## and the uncertainty on this value `
 print(timetemp)
 avg_timetemp = sum(timetemp)/len(timetemp)    
 SEtimetemp = numpy.std(timetemp)/(len(timetemp))**0.5
