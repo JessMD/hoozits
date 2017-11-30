@@ -15,8 +15,7 @@ import datetime
 ## Create files 
 `
 Temp = open('Temperature_data', 'w') 
-Hum = open('humidity_data' , 'w')
-        
+Hum = open('humidity_data' , 'w')      
 def getTemp():
 	with urllib.request.urlopen('http://192.168.1.2/temp') as response:
 		Temperature = str(response.read())
@@ -34,7 +33,6 @@ def getH():
 H = [ ]
 T = [ ]
 `
-
 ## Set up the plot object
 `
 plotFigure = pylab.figure()
@@ -50,7 +48,8 @@ def updatePlot( i ):
     pylab.ylabel('Temperature (degree celcius)')
     pylab.title('temperature measurements against Humidity ')
     `
-## Make the animated plot `
+## Make the animated plot 
+`
 ani = animation.FuncAnimation( plotFigure, updatePlot, interval=500 )
 pylab.show()
 `
